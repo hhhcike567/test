@@ -1,0 +1,214 @@
+[2023-11-14T12:13:55.194Z][DEBUG][T0][#0] lookup_inode: cwd: "/", path: "/etc/resolv.conf"
+[2023-11-14T12:13:55.196Z][DEBUG][T0][#0] convert_to_abs_path: cwd: "/", path: "/etc/resolv.conf"
+[2023-11-14T12:13:55.197Z][DEBUG][T0][#0] lookup_inode: cwd: "/", path: "/etc/hostname"
+[2023-11-14T12:13:55.197Z][DEBUG][T0][#0] convert_to_abs_path: cwd: "/", path: "/etc/hostname"
+[2023-11-14T12:13:55.197Z][DEBUG][T0][#0] lookup_inode: cwd: "/", path: "/etc/hosts"
+[2023-11-14T12:13:55.197Z][DEBUG][T0][#0] convert_to_abs_path: cwd: "/", path: "/etc/hosts"
+[2023-11-14T12:13:55.197Z][DEBUG][T0][#0] lookup_inode: cwd: "/", path: "/bin/init"
+[2023-11-14T12:13:55.197Z][DEBUG][T0][#0] convert_to_abs_path: cwd: "/", path: "/bin/init"
+[2023-11-14T12:13:55.209Z][DEBUG][T0][#0] lookup_inode: cwd: "/", path: "/lib/ld-musl-x86_64.so.1"
+[2023-11-14T12:13:55.209Z][DEBUG][T0][#0] convert_to_abs_path: cwd: "/", path: "/lib/ld-musl-x86_64.so.1"
+[2023-11-14T12:13:55.212Z][DEBUG][T0][#0] allocated rsrv addr is 0x7fc47584d000, len is 0xbb800000
+[2023-11-14T12:13:55.238Z][DEBUG][T0][#0] process group:ProcessGrp { inner: RwLock { inner: RwLockInner { status: AtomicRwLockStatus(0), rw_waiters: 0 }, data: PgrpInner { pgid: 1, process_group: {1: Process { pid: 1, exec_path: "/bin/init", ppid: Some(0), pgid: 1, inner: ProcessInner::Live { status: Running, child_pids: [], thread_tids: [1] } }}, leader_process: Some(Process { pid: 1, exec_path: "/bin/init", ppid: Some(0), pgid: 1, inner: ProcessInner::Live { status: Running, child_pids: [], thread_tids: [1] } }) } } }
+[2023-11-14T12:13:55.238Z][DEBUG][T0][#0] non idle process all pgrp: [ProcessGrp { inner: RwLock { inner: RwLockInner { status: AtomicRwLockStatus(0), rw_waiters: 0 }, data: PgrpInner { pgid: 1, process_group: {1: Process { pid: 1, exec_path: "/bin/init", ppid: Some(0), pgid: 1, inner: ProcessInner::Live { status: Running, child_pids: [], thread_tids: [1] } }}, leader_process: Some(Process { pid: 1, exec_path: "/bin/init", ppid: Some(0), pgid: 1, inner: ProcessInner::Live { status: Running, child_pids: [], thread_tids: [1] } }) } } }, ProcessGrp { inner: RwLock { inner: RwLockInner { status: AtomicRwLockStatus(0), rw_waiters: 0 }, data: PgrpInner { pgid: 0, process_group: {}, leader_process: Some(Process { pid: 0, exec_path: "", ppid: None, pgid: 0, inner: ProcessInner::Live { status: Running, child_pids: [1], thread_tids: [0] } }) } } }]
+[2023-11-14T12:13:55.238Z][ INFO][T0][#0] Process created: elf = /bin/init, pid = 1
+[2023-11-14T12:13:55.238Z][DEBUG][T1][#1][ArchPrctl] do_arch_prctl: code: ARCH_SET_FS, addr: 0x7fc476094d88
+[2023-11-14T12:13:55.238Z][DEBUG][T1][#2][SetTidAddress] set_tid_address: tidptr: 0x7fc476095364
+[2023-11-14T12:13:55.239Z][DEBUG][T1][#3][····Open] openat: fs_path: FsPath { Absolute("/opt/occlum/toolchains/gcc/x86_64-linux-musl/lib/libgcc_s.so.1") }, flags: 0o2000000, mode: 0o0
+[2023-11-14T12:13:55.239Z][DEBUG][T1][#3][····Open] lookup_inode: cwd: "/", path: "/opt/occlum/toolchains/gcc/x86_64-linux-musl/lib/libgcc_s.so.1"
+[2023-11-14T12:13:55.239Z][ERROR][T1][#3][····Open] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:55.239Z][DEBUG][T1][#4][····Open] openat: fs_path: FsPath { Absolute("/etc/ld-musl-x86_64.path") }, flags: 0o2000000, mode: 0o666
+[2023-11-14T12:13:55.239Z][DEBUG][T1][#4][····Open] lookup_inode: cwd: "/", path: "/etc/ld-musl-x86_64.path"
+[2023-11-14T12:13:55.239Z][ERROR][T1][#4][····Open] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:55.239Z][DEBUG][T1][#5][····Open] openat: fs_path: FsPath { Absolute("/lib/libgcc_s.so.1") }, flags: 0o2000000, mode: 0o0
+[2023-11-14T12:13:55.239Z][DEBUG][T1][#5][····Open] lookup_inode: cwd: "/", path: "/lib/libgcc_s.so.1"
+[2023-11-14T12:13:55.239Z][DEBUG][T1][#5][····Open] convert_to_abs_path: cwd: "/", path: "/lib/libgcc_s.so.1"
+[2023-11-14T12:13:55.239Z][DEBUG][T1][#6][···Fcntl] fcntl: fd: 3, cmd: SetFd(1)
+[2023-11-14T12:13:55.239Z][DEBUG][T1][#7][···Fstat] fstat: fd: 3
+[2023-11-14T12:13:55.239Z][DEBUG][T1][#8][····Read] read: fd: 3
+[2023-11-14T12:13:55.239Z][DEBUG][T1][#9][····Mmap] mmap: addr: 0x0, size: 0x217000, perms: READ | EXEC, flags: MAP_PRIVATE, fd: 3, offset: 0
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#10][····Mmap] mmap: addr: 0x7fc48cc15000, size: 0x2000, perms: READ | WRITE | DEFAULT, flags: MAP_PRIVATE | MAP_FIXED, fd: 3, offset: 86016
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#11][···Close] close: fd: 3
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#12][Mprotect] mprotect: addr: 0x7fc48cc15000, size: 0x1000, perms: READ
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#13][Mprotect] mprotect: addr: 0x7fc476091000, size: 0x1000, perms: READ
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#14][Mprotect] mprotect: addr: 0x7fc475c59000, size: 0x4000, perms: READ
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#15][ArchPrctl] do_arch_prctl: code: ARCH_SET_FS, addr: 0x7fc48cc166a0
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#16][SetTidAddress] set_tid_address: tidptr: 0x7fc476095364
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#17][····Poll] poll: poll_fds: [PollFd { fd: 0, events: ERR | HUP, revents: Cell { value: (empty) } }, PollFd { fd: 1, events: ERR | HUP, revents: Cell { value: (empty) } }, PollFd { fd: 2, events: ERR | HUP, revents: Cell { value: (empty) } }], timeout: Some(0ns)
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#18][RtSigaction] do_rt_sigaction: signum: SigNum (#13 = SIGPIPE), new_sa: Some(Ign)
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#19][RtSigaction] do_rt_sigaction: signum: SigNum (#11 = SIGSEGV), new_sa: None
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#20][RtSigprocmask] do_rt_sigprocmask: op_and_set: Some((Unblock, SigSet { [SigNum (#33, real-time), SigNum (#34, real-time)] })), oldset: None
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#21][RtSigaction] do_rt_sigaction: signum: SigNum (#11 = SIGSEGV), new_sa: Some(User { handler_addr: 140481763905104, flags: SA_SIGINFO | SA_ONSTACK | SA_RESTORER, restorer_addr: 140481768299091, mask: SigSet { [] } })
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#22][RtSigaction] do_rt_sigaction: signum: SigNum (#7 = SIGBUS), new_sa: None
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#23][RtSigaction] do_rt_sigaction: signum: SigNum (#7 = SIGBUS), new_sa: Some(User { handler_addr: 140481763905104, flags: SA_SIGINFO | SA_ONSTACK | SA_RESTORER, restorer_addr: 140481768299091, mask: SigSet { [] } })
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#24][Sigaltstack] do_sigaltstack: new_ss:None
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#25][····Mmap] mmap: addr: 0x0, size: 0x3000, perms: READ | WRITE | DEFAULT, flags: MAP_PRIVATE | MAP_ANONYMOUS | MAP_STACK
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#26][Mprotect] mprotect: addr: 0x7fc48cc17000, size: 0x1000, perms: NONE
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#27][Sigaltstack] do_sigaltstack: new_ss:Some(SigStack { sp: 140482151809024, flags: EMPTY, size: 8192 })
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#28][RtSigprocmask] do_rt_sigprocmask: op_and_set: Some((Block, SigSet { All except [SigNum (#32, real-time), SigNum (#33, real-time), SigNum (#34, real-time)] })), oldset: Some(28360702)
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#29][RtSigprocmask] do_rt_sigprocmask: op_and_set: Some((SetMask, SigSet { [] })), oldset: None
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#30][····Open] openat: fs_path: FsPath { Absolute("/etc/image_config.json") }, flags: 0o2000000, mode: 0o0
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#30][····Open] lookup_inode: cwd: "/", path: "/etc/image_config.json"
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#30][····Open] convert_to_abs_path: cwd: "/", path: "/etc/image_config.json"
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#31][···Fcntl] fcntl: fd: 3, cmd: SetFd(1)
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#32][···Fstat] fstat: fd: 3
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#34][····Read] read: fd: 3
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#35][····Read] read: fd: 3
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#36][···Close] close: fd: 3
+[2023-11-14T12:13:55.247Z][DEBUG][T1][#37][MountRootFS] mount rootfs
+[2023-11-14T12:13:55.248Z][DEBUG][T1][#37][MountRootFS] lookup_inode: cwd: "/", path: "/etc/resolv.conf"
+[2023-11-14T12:13:55.248Z][DEBUG][T1][#37][MountRootFS] convert_to_abs_path: cwd: "/", path: "/etc/resolv.conf"
+[2023-11-14T12:13:55.248Z][DEBUG][T1][#37][MountRootFS] lookup_inode: cwd: "/", path: "/etc/hostname"
+[2023-11-14T12:13:55.248Z][DEBUG][T1][#37][MountRootFS] convert_to_abs_path: cwd: "/", path: "/etc/hostname"
+[2023-11-14T12:13:55.248Z][DEBUG][T1][#37][MountRootFS] lookup_inode: cwd: "/", path: "/etc/hosts"
+[2023-11-14T12:13:55.248Z][DEBUG][T1][#37][MountRootFS] convert_to_abs_path: cwd: "/", path: "/etc/hosts"
+[2023-11-14T12:13:55.248Z][DEBUG][T1][#38][Sigaltstack] do_sigaltstack: new_ss:Some(SigStack { sp: 0, flags: SS_DISABLE, size: 8192 })
+[2023-11-14T12:13:55.248Z][DEBUG][T1][#39][··Munmap] munmap: addr: 0x7fc48cc17000, size: 0x3000
+[2023-11-14T12:13:55.248Z][DEBUG][T1][#40][ExitGroup] exit_group: 0
+[2023-11-14T12:13:55.249Z][DEBUG][T1][#40][ExitGroup] futex_wake_bitset addr: 0x7fc476095364, max_count: 1, bitset: 0xffffffff
+[2023-11-14T12:13:56.221Z][ WARN][T1][#40][ExitGroup] no vforked children found
+[2023-11-14T12:13:56.222Z][DEBUG][T1][#40][ExitGroup] futex_wake_bitset addr: 0x7fc000996f70, max_count: 1, bitset: 0xffffffff
+[2023-11-14T12:13:56.222Z][ INFO][T1][#40][ExitGroup] Thread exited: tid = 1, status = 0
+[2023-11-14T12:13:56.222Z][ INFO][T0][#40][ExitGroup] Process VM dropped
+[2023-11-14T12:13:56.222Z][ INFO][T0][#40][ExitGroup] Idle process reaps zombie children pid = []
+[2023-11-14T12:13:56.222Z][ WARN][T0][#40][ExitGroup] HostFS: sync is unimplemented
+[2023-11-14T12:13:56.223Z][DEBUG][T0][#0] lookup_inode: cwd: "/", path: "/bin/clone_78"
+[2023-11-14T12:13:56.224Z][DEBUG][T0][#0] convert_to_abs_path: cwd: "/", path: "/bin/clone_78"
+[2023-11-14T12:13:56.224Z][DEBUG][T0][#0] lookup_inode: cwd: "/", path: "/lib64/ld-linux-x86-64.so.2"
+[2023-11-14T12:13:56.224Z][DEBUG][T0][#0] convert_to_abs_path: cwd: "/", path: "/lib64/ld-linux-x86-64.so.2"
+[2023-11-14T12:13:56.231Z][DEBUG][T0][#0] process group:ProcessGrp { inner: RwLock { inner: RwLockInner { status: AtomicRwLockStatus(0), rw_waiters: 0 }, data: PgrpInner { pgid: 2, process_group: {2: Process { pid: 2, exec_path: "/bin/clone_78", ppid: Some(0), pgid: 2, inner: ProcessInner::Live { status: Running, child_pids: [], thread_tids: [2] } }}, leader_process: Some(Process { pid: 2, exec_path: "/bin/clone_78", ppid: Some(0), pgid: 2, inner: ProcessInner::Live { status: Running, child_pids: [], thread_tids: [2] } }) } } }
+[2023-11-14T12:13:56.231Z][DEBUG][T0][#0] non idle process all pgrp: [ProcessGrp { inner: RwLock { inner: RwLockInner { status: AtomicRwLockStatus(0), rw_waiters: 0 }, data: PgrpInner { pgid: 2, process_group: {2: Process { pid: 2, exec_path: "/bin/clone_78", ppid: Some(0), pgid: 2, inner: ProcessInner::Live { status: Running, child_pids: [], thread_tids: [2] } }}, leader_process: Some(Process { pid: 2, exec_path: "/bin/clone_78", ppid: Some(0), pgid: 2, inner: ProcessInner::Live { status: Running, child_pids: [], thread_tids: [2] } }) } } }, ProcessGrp { inner: RwLock { inner: RwLockInner { status: AtomicRwLockStatus(0), rw_waiters: 0 }, data: PgrpInner { pgid: 0, process_group: {}, leader_process: Some(Process { pid: 0, exec_path: "", ppid: None, pgid: 0, inner: ProcessInner::Live { status: Running, child_pids: [2], thread_tids: [0] } }) } } }]
+[2023-11-14T12:13:56.231Z][ INFO][T0][#0] Process created: elf = /bin/clone_78, pid = 2
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#1][HandleException] handle RDTSC exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#2][HandleException] handle RDTSC exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#3][·····Brk] brk: addr: 0x0
+[2023-11-14T12:13:56.231Z][ERROR][T2][#3][·····Brk] New brk address is too low
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#4][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#5][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#6][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#7][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#8][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#9][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#10][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#11][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#12][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#13][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#14][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#15][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#16][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#17][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.231Z][ERROR][T2][#18][ArchPrctl] Error = EINVAL (#22, Invalid argument): Unknown code for arch_prctl [line = 35, file = src/process/do_arch_prctl.rs]
+[2023-11-14T12:13:56.231Z][DEBUG][T2][#19][··Access] faccessat: fs_path: FsPath { Absolute("/etc/ld.so.preload") }, mode: R_OK, flags: (empty)
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#19][··Access] lookup_inode: cwd: "/", path: "/etc/ld.so.preload"
+[2023-11-14T12:13:56.232Z][ERROR][T2][#19][··Access] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#20][HandleException] handle RDTSC exception
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#21][··Openat] openat: fs_path: FsPath { Absolute("/opt/occlum/glibc/etc/ld.so.cache") }, flags: 0o2000000, mode: 0o0
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#21][··Openat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/etc/ld.so.cache"
+[2023-11-14T12:13:56.232Z][ERROR][T2][#21][··Openat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#22][··Openat] openat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/tls/haswell/x86_64/libc.so.6") }, flags: 0o2000000, mode: 0o0
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#22][··Openat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/tls/haswell/x86_64/libc.so.6"
+[2023-11-14T12:13:56.232Z][ERROR][T2][#22][··Openat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#23][····Stat] fstatat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/tls/haswell/x86_64") }, flags: (empty)
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#23][····Stat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/tls/haswell/x86_64"
+[2023-11-14T12:13:56.232Z][ERROR][T2][#23][····Stat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#24][··Openat] openat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/tls/haswell/libc.so.6") }, flags: 0o2000000, mode: 0o0
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#24][··Openat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/tls/haswell/libc.so.6"
+[2023-11-14T12:13:56.232Z][ERROR][T2][#24][··Openat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#25][····Stat] fstatat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/tls/haswell") }, flags: (empty)
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#25][····Stat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/tls/haswell"
+[2023-11-14T12:13:56.232Z][ERROR][T2][#25][····Stat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#26][··Openat] openat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/tls/x86_64/libc.so.6") }, flags: 0o2000000, mode: 0o0
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#26][··Openat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/tls/x86_64/libc.so.6"
+[2023-11-14T12:13:56.232Z][ERROR][T2][#26][··Openat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.232Z][DEBUG][T2][#27][····Stat] fstatat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/tls/x86_64") }, flags: (empty)
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#27][····Stat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/tls/x86_64"
+[2023-11-14T12:13:56.233Z][ERROR][T2][#27][····Stat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#28][··Openat] openat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/tls/libc.so.6") }, flags: 0o2000000, mode: 0o0
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#28][··Openat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/tls/libc.so.6"
+[2023-11-14T12:13:56.233Z][ERROR][T2][#28][··Openat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#29][····Stat] fstatat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/tls") }, flags: (empty)
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#29][····Stat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/tls"
+[2023-11-14T12:13:56.233Z][ERROR][T2][#29][····Stat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#30][··Openat] openat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/haswell/x86_64/libc.so.6") }, flags: 0o2000000, mode: 0o0
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#30][··Openat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/haswell/x86_64/libc.so.6"
+[2023-11-14T12:13:56.233Z][ERROR][T2][#30][··Openat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#31][····Stat] fstatat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/haswell/x86_64") }, flags: (empty)
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#31][····Stat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/haswell/x86_64"
+[2023-11-14T12:13:56.233Z][ERROR][T2][#31][····Stat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#32][··Openat] openat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/haswell/libc.so.6") }, flags: 0o2000000, mode: 0o0
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#32][··Openat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/haswell/libc.so.6"
+[2023-11-14T12:13:56.233Z][ERROR][T2][#32][··Openat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#33][····Stat] fstatat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/haswell") }, flags: (empty)
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#33][····Stat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/haswell"
+[2023-11-14T12:13:56.233Z][ERROR][T2][#33][····Stat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#34][··Openat] openat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/x86_64/libc.so.6") }, flags: 0o2000000, mode: 0o0
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#34][··Openat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/x86_64/libc.so.6"
+[2023-11-14T12:13:56.233Z][ERROR][T2][#34][··Openat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#35][····Stat] fstatat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/x86_64") }, flags: (empty)
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#35][····Stat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/x86_64"
+[2023-11-14T12:13:56.233Z][ERROR][T2][#35][····Stat] Error = ENOENT (#2, No such file or directory): EntryNotFound
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#36][··Openat] openat: fs_path: FsPath { Absolute("/opt/occlum/glibc/lib/libc.so.6") }, flags: 0o2000000, mode: 0o0
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#36][··Openat] lookup_inode: cwd: "/", path: "/opt/occlum/glibc/lib/libc.so.6"
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#36][··Openat] convert_to_abs_path: cwd: "/", path: "/opt/occlum/glibc/lib/libc.so.6"
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#37][····Read] read: fd: 3
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#38][·Pread64] pread: fd: 3, offset: 64
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#39][·Pread64] pread: fd: 3, offset: 848
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#40][·Pread64] pread: fd: 3, offset: 880
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#41][···Fstat] fstat: fd: 3
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#42][·Pread64] pread: fd: 3, offset: 64
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#43][·Pread64] pread: fd: 3, offset: 848
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#44][·Pread64] pread: fd: 3, offset: 880
+[2023-11-14T12:13:56.233Z][DEBUG][T2][#45][····Mmap] mmap: addr: 0x0, size: 0x1c7420, perms: READ, flags: MAP_PRIVATE | MAP_DENYWRITE, fd: 3, offset: 0
+[2023-11-14T12:13:56.244Z][DEBUG][T2][#46][Mprotect] mprotect: addr: 0x7fc48c0a6000, size: 0x199000, perms: NONE
+[2023-11-14T12:13:56.244Z][DEBUG][T2][#47][····Mmap] mmap: addr: 0x7fc48c0a6000, size: 0x14e000, perms: READ | EXEC, flags: MAP_PRIVATE | MAP_FIXED | MAP_DENYWRITE, fd: 3, offset: 151552
+[2023-11-14T12:13:56.247Z][DEBUG][T2][#48][····Mmap] mmap: addr: 0x7fc48c1f4000, size: 0x4a000, perms: READ, flags: MAP_PRIVATE | MAP_FIXED | MAP_DENYWRITE, fd: 3, offset: 1519616
+[2023-11-14T12:13:56.247Z][DEBUG][T2][#49][····Mmap] mmap: addr: 0x7fc48c23f000, size: 0x6000, perms: READ | WRITE | DEFAULT, flags: MAP_PRIVATE | MAP_FIXED | MAP_DENYWRITE, fd: 3, offset: 1822720
+[2023-11-14T12:13:56.247Z][DEBUG][T2][#50][····Mmap] mmap: addr: 0x7fc48c245000, size: 0x3420, perms: READ | WRITE | DEFAULT, flags: MAP_PRIVATE | MAP_FIXED | MAP_ANONYMOUS
+[2023-11-14T12:13:56.247Z][DEBUG][T2][#51][···Close] close: fd: 3
+[2023-11-14T12:13:56.247Z][DEBUG][T2][#52][HandleException] handle RDTSC exception
+[2023-11-14T12:13:56.247Z][DEBUG][T2][#53][····Mmap] mmap: addr: 0x0, size: 0x2000, perms: READ | WRITE | DEFAULT, flags: MAP_PRIVATE | MAP_ANONYMOUS
+[2023-11-14T12:13:56.247Z][DEBUG][T2][#54][ArchPrctl] do_arch_prctl: code: ARCH_SET_FS, addr: 0x7fc48c249f80
+[2023-11-14T12:13:56.247Z][DEBUG][T2][#55][HandleException] handle RDTSC exception
+[2023-11-14T12:13:56.247Z][DEBUG][T2][#56][Mprotect] mprotect: addr: 0x7fc48c23f000, size: 0x3000, perms: READ
+[2023-11-14T12:13:56.247Z][DEBUG][T2][#57][Mprotect] mprotect: addr: 0x7fc475850000, size: 0x1000, perms: READ
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#58][HandleException] handle RDTSC exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#59][HandleException] handle RDTSC exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#60][Mprotect] mprotect: addr: 0x7fc47587e000, size: 0x1000, perms: READ
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#61][HandleException] handle RDTSC exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#62][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#63][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#64][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#65][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#66][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#67][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#68][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#69][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#70][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#71][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#72][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#73][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#74][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#75][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#76][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#77][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#78][HandleException] handle CPUID exception
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#79][···Fstat] fstat: fd: 1
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#80][···Ioctl] ioctl: fd: 1, cmd: TCGETS(KernelTermios { c_iflag: 0, c_oflag: 0, c_cflag: 0, c_lflag: 0, c_line: 2, c_cc: [2, 0, 0, 0, 0, 0, 0, 1, 240, 255, 255, 255, 255, 255, 255, 128, 1, 136, 117] })
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#81][·····Brk] brk: addr: 0x0
+[2023-11-14T12:13:56.248Z][ERROR][T2][#81][·····Brk] New brk address is too low
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#82][·····Brk] brk: addr: 0x7fc4758a2000
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#83][···Write] write: fd: 1
+Hello, World!
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#84][····Mmap] mmap: addr: 0x0, size: 0x101000, perms: READ | WRITE | DEFAULT, flags: MAP_PRIVATE | MAP_ANONYMOUS
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#85][···Clone] clone: flags: (empty), stack_addr: 140482142580728, ptid: None, ctid: None, new_tls: None
+[2023-11-14T12:13:56.248Z][ERROR][T2][#85][···Clone] Error = EINVAL (#22, Invalid argument): missing mandatory flags [line = 229, file = src/process/do_clone.rs]
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#86][···Write] write: fd: 1
+ERROR: Unable to create the child process.
+[2023-11-14T12:13:56.248Z][DEBUG][T2][#87][ExitGroup] exit_group: 1
+[2023-11-14T12:13:57.205Z][ WARN][T2][#87][ExitGroup] no vforked children found
+[2023-11-14T12:13:57.205Z][DEBUG][T2][#87][ExitGroup] futex_wake_bitset addr: 0x7fc000932010, max_count: 1, bitset: 0xffffffff
+[2023-11-14T12:13:57.205Z][ INFO][T2][#87][ExitGroup] Thread exited: tid = 2, status = 1
+[2023-11-14T12:13:57.205Z][ INFO][T0][#87][ExitGroup] Process VM dropped
+[2023-11-14T12:13:57.205Z][ INFO][T0][#87][ExitGroup] Idle process reaps zombie children pid = []
+[2023-11-14T12:13:57.206Z][ WARN][T0][#87][ExitGroup] HostFS: sync is unimplemented
+[2023-11-14T12:13:57.206Z][ INFO][T0][#87][ExitGroup] free user space VM: VMRange { start: 0x7fc47584d000, end: 0x7fc53104d000, size: 0xbb800000 }
