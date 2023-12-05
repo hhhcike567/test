@@ -33,8 +33,9 @@ void main(int argc, char *argv[])
       printf("ERROR: Unable to allocate memory.\n");
       exit(EXIT_FAILURE);
    }
+   int flags = CLONE_VM | CLONE_FS | CLONE_FILES | CLONE_SIGHAND | CLONE_THREAD | CLONE_SYSVSEM | CLONE_SETTLS;
 
-   int pid = clone(fn, pchild_stack + (1024 * 1024), NULL, argv[1]);
+   int pid = clone(fn, pchild_stack + (1024 * 1024), flags, argv[1]);
    if ( pid < 0 ) {
         printf("ERROR: Unable to create the child process.\n");
         exit(EXIT_FAILURE);
